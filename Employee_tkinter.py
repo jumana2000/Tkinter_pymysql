@@ -1,4 +1,4 @@
-from tkinter import *
+import tkinter
 import tkinter.messagebox
 import pymysql
 from PIL import ImageTk, Image
@@ -75,8 +75,9 @@ def view():
     
     cur.execute('select * from e_table')
     v=cur.fetchall()
-    for i in v:
-        tx.insert(INSERT,(i))
+    vn=[','.join(map(str,xd))for xd in v]
+    for i in vn:
+        tx.insert(tkinter.INSERT,('%s\n'%i))
         
     
 
