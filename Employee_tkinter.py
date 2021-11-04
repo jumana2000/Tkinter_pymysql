@@ -55,11 +55,11 @@ def add():
         x.close()
         
         tkinter.messagebox.showinfo('Thank You','Thank You for visiting')
-        t.destroy()
+        
     
 
-f=tkinter.Button(text='Add',command=add,bg='lightblue',fg='black',font=('times new roman',15,'bold'))
-f.place(x=225,y=300)
+add_button=tkinter.Button(text='Add',command=add,bg='lightblue',fg='black',font=('times new roman',15,'bold'))
+add_button.place(x=225,y=300)
 
 
 def view():
